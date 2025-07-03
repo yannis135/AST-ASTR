@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="AST-ASTR FORMATION - Organisme de formation professionnelle spécialisé en CACES, habilitations électriques et permis de conduire depuis 2010. Centres en France et Tunisie.">
+  <meta name="keywords" content="formation CACES, habilitation électrique, permis conduire, formation professionnelle, sécurité travail, Vitrolles, Tunis, France, Tunisie">
+  <meta name="author" content="AST-ASTR FORMATION">
+  <title>AST-ASTR FORMATION - Expert en Formations Professionnelles | CACES, Habilitations & Permis</title>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.ast-astr.com/">
+  <meta property="og:title" content="AST-ASTR FORMATION - Expert en Formations Professionnelles">
+  <meta property="og:description" content="Organisme de formation spécialisé en CACES, habilitations électriques et permis de conduire. Centres en France et Tunisie.">
+
+  <!-- Hreflang pour le SEO international -->
+  <link rel="alternate" hreflang="fr-FR" href="https://www.ast-astr.com/fr/" />
+  <link rel="alternate" hreflang="fr-TN" href="https://www.ast-astr.com/tn/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.ast-astr.com/" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ast-astr.com/">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AST-ASTR FORMATION",
+    "description": "Organisme de formation professionnelle spécialisé dans les CACES, habilitations électriques et permis de conduire",
+    "url": "https://www.ast-astr.com",
+    "foundingDate": "2010",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+33-4-XX-XX-XX-XX",
+        "contactType": "customer service",
+        "areaServed": "FR"
+      },
+      {
+        "@type": "ContactPoint", 
+        "telephone": "+216-XX-XXX-XXX",
+        "contactType": "customer service",
+        "areaServed": "TN"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+    :root {
+      /* Couleurs principales de la plaquette */
+      --navy-blue: #1e3a8a;
+      --dark-navy: #0f172a;
+      --light-navy: #334155;
+      --cyan-blue: #0ea5e9;
+      --light-cyan: #7dd3fc;
+      --accent-orange: #f97316;
+      --accent-green: #22c55e;
+      --white: #ffffff;
+      --light-gray: #f8fafc;
+      --medium-gray: #64748b;
+      --dark-gray: #334155;
+      
+      /* Dégradés de la plaquette */
+      --gradient-primary: linear-gradient(135deg, #1e3a8a 0%, #0ea5e9 100%);
+      --gradient-secondary: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0ea5e9 100%);
+      --gradient-accent: linear-gradient(135deg, #22c55e 0%, #0ea5e9 100%);
+      
+      /* Ombres */
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--dark-gray);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* Formes hexagonales comme dans la plaquette */
+    .hexagon {
+      width: 120px;
+      height: 120px;
+      position: relative;
+      margin: 0 auto 2rem;
+      background: var(--gradient-primary);
+      clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .hexagon-image {
+      width: 150px;
+      height: 150px;
+      position: relative;
+      margin: 0 auto 1rem;
+      overflow: hidden;
+      clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
+    }
+
+    .hexagon-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Header */
+    header.main-header {
+      background: var(--white);
+      box-shadow: var(--shadow-lg);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 3px solid var(--cyan-blue);
+    }
+
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-section {
+      text-align: left;
+    }
+
+    .logo-svg svg {
+      max-width: 280px;
+      height: auto;
+      filter: drop-shadow(var(--shadow-md));
+    }
+
+    .tagline {
+      font-size: 0.9rem;
+      color: var(--medium-gray);
+      font-weight: 600;
+      margin-top: 0.5rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* Navigation Menu */
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark-gray);
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+    }
+
+    .nav-links a:hover {
+      color: var(--cyan-blue);
+      background: rgba(14, 165, 233, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 3px;
+      bottom: -5px;
+      left: 50%;
+      background: var(--cyan-blue);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-links a:hover::after {
+      width: 80%;
+    }
+
+    /* Social Media & Contact */
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-right: 1.5rem;
+    }
+
+    .social-btn {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .social-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .social-btn:hover::before {
+      opacity: 1;
+    }
+
+    .social-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .linkedin {
+      background: linear-gradient(135deg, #0077b5 0%, #005885 100%);
+    }
+
+    .instagram {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    }
+
+    .facebook {
+      background: linear-gradient(135deg, #1877f2 0%, #1565c0 100%);
+    }
+
+    .contact-btn {
+      background: var(--gradient-primary);
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: var(--shadow-lg);
+      letter-spacing: 0.5px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .contact-btn:hover::before {
+      left: 100%;
+    }
+
+    .contact-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-xl);
+      color: white;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      color: var(--dark-gray);
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-menu-toggle:hover {
+      background: rgba(14, 165, 233, 0.1);
+      color: var(--cyan-blue);
+    }
+
+    .mobile-nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      box-shadow: var(--shadow-xl);
+      padding: 2rem;
+      flex-direction: column;
+      gap: 1.5rem;
+      border-top: 3px solid var(--cyan-blue);
+    }
+
+    .mobile-nav.active {
+      display: flex;
+    }
+
+    .mobile-nav .nav-links {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .mobile-nav .social-links {
+      justify-content: center;
+      margin: 1.5rem 0;
+    }
+
+    /* Country Selection - Hero Section */
+    .country-selection {
+      background: var(--gradient-secondary);
+      padding: 6rem 2rem;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .country-selection::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="hexagons" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><polygon points="10,1 18,6 18,14 10,19 2,14 2,6" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100%" height="100%" fill="url(%23hexagons)"/></svg>') repeat;
+      opacity: 0.3;
+    }
+
+    .country-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .section-title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      letter-spacing: -1px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .section-subtitle {
+      font-size: 1.4rem;
+      opacity: 0.95;
+      margin-bottom: 4rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 400;
+      line-height: 1.7;
+    }
+
+    .countries-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .country-card {
+      background: var(--white);
+      border-radius: 24px;
+      padding: 3.5rem 2.5rem;
+      box-shadow: var(--shadow-xl);
+      transition: all 0.4s ease;
+      text-decoration: none;
+      color: var(--dark-gray);
+      position: relative;
+      overflow: hidden;
+      border: 3px solid transparent;
+    }
+
+    .country-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: var(--gradient-primary);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+
+    .country-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.05) 0%, rgba(30, 58, 138, 0.05) 100%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .country-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      border-color: var(--cyan-blue);
+    }
+
+    .country-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .country-card:hover::after {
+      opacity: 1;
+    }
+
+    .country-flag {
+      width: 100px;
+      height: 75px;
+      margin: 0 auto 2rem;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      z-index: 3;
+    }
+
+    .france-flag {
+      background: linear-gradient(to right, #002395 33%, #FFFFFF 33%, #FFFFFF 66%, #ED2939 66%);
+      border: 2px solid #ddd;
+    }
+
+    .tunisia-flag {
+      background: #E70013;
+      color: white;
+    }
+
+    .country-name {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      color: var(--navy-blue);
+      position: relative;
+      z-index: 3;
+    }
+
+    .country-center {
+      font-size: 1.3rem;
+      color: var(--cyan-blue);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 3;
+    }
+
+    .country-info {
+      color: var(--medium-gray);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+      font-size: 1.1rem;
+      position: relative;
+      z-index: 3;
+    }
+
+    .country-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 1.2rem 2.5rem;
+      background: var(--gradient-primary);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      z-index: 3;
+      overflow: hidden;
+    }
+
+    .country-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .country-btn:hover::before {
+      left: 100%;
+    }
+
+    .country-btn:hover {
+      transform: translateX(8px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: var(--light-gray);
+      color: var(--dark-gray);
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.05) 0%, rgba(30, 58, 138, 0.05) 100%);
+    }
+
+    .hero-container {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 800;
+      margin-bottom: 2rem;
+      line-height: 1.2;
+      color: var(--navy-blue);
+      letter-spacing: -1px;
+    }
+
+    .hero-description {
+      font-size: 1.3rem;
+      margin-bottom: 3rem;
+      color: var(--dark-gray);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    /* Notre Histoire Section */
+    .about {
+      padding: 6rem 2rem;
+      background: white;
+      position: relative;
+    }
+
+    .about::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1" fill="rgba(14, 165, 233, 0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23dots)"/></svg>') repeat;
+      opacity: 0.4;
+    }
+
+    .about-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .about .section-title {
+      color: var(--navy-blue);
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      text-shadow: none;
+    }
+
+    .about .section-subtitle {
+      color: var(--medium-gray);
+      font-size: 1.2rem;
+      margin-bottom: 4rem;
+      opacity: 1;
+    }
+
+    .history-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      gap: 3rem;
+      margin-top: 4rem;
+    }
+
+    .history-text {
+      background: var(--white);
+      padding: 3rem;
+      border-radius: 20px;
+      border: 3px solid var(--cyan-blue);
+      text-align: left;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .history-text::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 100%;
+      background: var(--gradient-primary);
+    }
+
+    .history-text::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background: var(--hexagon);
+      clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
+      background: var(--gradient-accent);
+      opacity: 0.1;
+    }
+
+    .history-text:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .history-text h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--navy-blue);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .history-text h3::before {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: var(--cyan-blue);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .history-text p {
+      color: var(--dark-gray);
+      line-height: 1.8;
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+
+    /* Recrutement Section */
+    .recruitment {
+      background: var(--gradient-secondary);
+      color: white;
+      padding: 6rem 2rem;
+      position: relative;
+    }
+
+    .recruitment::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="hexagons-white" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse"><polygon points="12.5,2 21,7.5 21,17.5 12.5,23 4,17.5 4,7.5" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/></pattern></defs><rect width="100%" height="100%" fill="url(%23hexagons-white)"/></svg>') repeat;
+      opacity: 0.3;
+    }
+
+    .recruitment-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .recruitment .section-title {
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .recruitment .section-subtitle {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .recruitment-content {
+      margin-top: 4rem;
+    }
+
+    .recruitment-intro {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 3rem;
+      border-radius: 20px;
+      margin-bottom: 4rem;
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .recruitment-intro h3 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--light-cyan);
+    }
+
+    .recruitment-intro p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    .job-offers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .job-card {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 2.5rem;
+      border-radius: 20px;
+      text-align: left;
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .job-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-accent);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .job-card:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .job-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .job-card h4 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--light-cyan);
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .job-card p {
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+
+    .job-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .job-card li {
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 0.8rem;
+      padding-left: 2rem;
+      position: relative;
+      font-weight: 500;
+    }
+
+    .job-card li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--accent-green);
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .recruitment-cta {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 3rem;
+      border-radius: 20px;
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .recruitment-cta h3 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--light-cyan);
+    }
+
+    .recruitment-cta p {
+      font-size: 1.2rem;
+      margin-bottom: 2.5rem;
+      color: rgba(255, 255, 255, 0.95);
+      line-height: 1.7;
+    }
+
+    .recruitment-btn {
+      background: var(--gradient-accent);
+      color: white;
+      padding: 1.2rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.2rem;
+      display: inline-block;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .recruitment-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .recruitment-btn:hover::before {
+      left: 100%;
+    }
+
+    .recruitment-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-xl);
+      color: white;
+    }
+
+    /* Stats Section */
+    .stats {
+      background: var(--navy-blue);
+      color: white;
+      padding: 4rem 2rem;
+      position: relative;
+    }
+
+    .stats::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--gradient-primary);
+      opacity: 0.1;
+    }
+
+    .stats-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      text-align: center;
+    }
+
+    .stat-item {
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-accent);
+    }
+
+    .stat-item:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .stat-number {
+      font-size: 4rem;
+      font-weight: 800;
+      color: var(--light-cyan);
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .stat-label {
+      font-size: 1.2rem;
+      opacity: 0.95;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark-navy);
+      color: white;
+      padding: 4rem 2rem 2rem;
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="footer-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(14, 165, 233, 0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23footer-pattern)"/></svg>') repeat;
+    }
+
+    .footer-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-section h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--light-cyan);
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    .footer-section h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background: var(--gradient-accent);
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section li {
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-section a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .footer-section a::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--cyan-blue);
+      transition: transform 0.3s ease;
+    }
+
+    .footer-section a:hover::before {
+      transform: translateX(3px);
+    }
+
+    .footer-section a:hover {
+      color: white;
+      transform: translateX(3px);
+    }
+
+    .footer-bottom {
+      border-top: 2px solid rgba(14, 165, 233, 0.3);
+      padding-top: 2rem;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    /* Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Floating elements animation */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(2deg); }
+    }
+
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    /* Pulse animation for stats */
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .pulse {
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .main-nav {
+        display: none;
+      }
+
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .header-container {
+        justify-content: space-between;
+        padding: 1rem 1.5rem;
+      }
+
+      .header-actions {
+        gap: 1rem;
+      }
+
+      .social-links {
+        gap: 0.8rem;
+        margin-right: 1rem;
+      }
+
+      .social-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+      }
+
+      .contact-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+      }
+
+      .countries-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .country-card {
+        padding: 2.5rem 2rem;
+      }
+      
+      .history-content {
+        gap: 2rem;
+      }
+
+      .history-text {
+        padding: 2rem;
+      }
+
+      .job-offers {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+      
+      .section-title {
+        font-size: clamp(2rem, 6vw, 2.8rem) !important;
+      }
+      
+      .logo-svg svg {
+        max-width: 220px;
+      }
+
+      .tagline {
+        font-size: 0.8rem;
+      }
+
+      .country-selection,
+      .hero,
+      .about,
+      .recruitment {
+        padding: 4rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .countries-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .job-offers {
+        grid-template-columns: 1fr;
+      }
+
+      .header-container {
+        padding: 1rem;
+      }
+
+      .logo-svg svg {
+        max-width: 200px;
+      }
+
+      .social-links {
+        display: none;
+      }
+
+      .contact-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.85rem;
+      }
+
+      .history-text,
+      .recruitment-intro,
+      .recruitment-cta,
+      .job-card {
+        padding: 2rem 1.5rem;
+      }
+
+      .country-card {
+        padding: 2rem 1.5rem;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <nav class="header-container">
+      <section class="logo-section">
+        <h1 class="logo-svg">
+          <svg width="280" height="80" viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#0ea5e9;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <rect width="280" height="80" fill="url(#logoGradient)" rx="8"/>
+            <text x="140" y="32" font-family="Inter, sans-serif" font-size="20" font-weight="800" fill="white" text-anchor="middle">AST &amp; ASTR</text>
+            <text x="140" y="55" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="white" text-anchor="middle">FORMATION</text>
+          </svg>
+        </h1>
+        <p class="tagline">Expert en formations professionnelles depuis 2010</p>
+      </section>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="#notre-histoire">Notre histoire</a></li>
+          <li><a href="#recrutement">Recrutement</a></li>
+        </ul>
+      </nav>
+
+      <section class="header-actions">
+        <nav class="social-links" aria-label="Réseaux sociaux">
+          <a href="https://linkedin.com/company/ast-astr-formation" class="social-btn linkedin" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <span aria-hidden="true">in</span>
+          </a>
+          <a href="https://instagram.com/ast.astr.formation" class="social-btn instagram" aria-label="Instagram" target="_blank" rel="noopener">
+            <span aria-hidden="true">📷</span>
+          </a>
+          <a href="https://facebook.com/ast.astr.formation" class="social-btn facebook" aria-label="Facebook" target="_blank" rel="noopener">
+            <span aria-hidden="true">f</span>
+          </a>
+        </nav>
+        <a href="/contact" class="contact-btn">Contactez-nous</a>
+      </section>
+
+      <button class="mobile-menu-toggle" aria-label="Menu mobile" aria-expanded="false">
+        ☰
+      </button>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" aria-label="Navigation mobile">
+      <ul class="nav-links">
+        <li><a href="#notre-histoire">Notre histoire</a></li>
+        <li><a href="#recrutement">Recrutement</a></li>
+      </ul>
+      <section class="social-links">
+        <a href="https://linkedin.com/company/ast-astr-formation" class="social-btn linkedin" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <span aria-hidden="true">in</span>
+        </a>
+        <a href="https://instagram.com/ast.astr.formation" class="social-btn instagram" aria-label="Instagram" target="_blank" rel="noopener">
+          <span aria-hidden="true">📷</span>
+        </a>
+        <a href="https://facebook.com/ast.astr.formation" class="social-btn facebook" aria-label="Facebook" target="_blank" rel="noopener">
+          <span aria-hidden="true">f</span>
+        </a>
+      </section>
+      <a href="/contact" class="contact-btn">Contactez-nous</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Country Selection First -->
+    <section class="country-selection">
+      <article class="country-container">
+        <h1 class="section-title">Choisissez votre centre de formation</h1>
+        <p class="section-subtitle">
+          Sélectionnez votre pays pour accéder aux formations et services disponibles dans votre région
+        </p>
+        
+        <nav class="countries-grid" aria-label="Sélection de centre par pays">
+          <a href="/fr/" class="country-card fade-in floating" aria-label="Accéder au centre de formation en France">
+            <figure class="country-flag france-flag" aria-label="Drapeau français"></figure>
+            <h2 class="country-name">🇫🇷 France</h2>
+            <p class="country-center">Centre de Vitrolles</p>
+            <p class="country-info">
+              Formations CACES, habilitations électriques, permis de conduire et sécurité. 
+              Conformes aux réglementations européennes et françaises.
+            </p>
+            <span class="country-btn">
+              Accéder au site français
+              <span aria-hidden="true">→</span>
+            </span>
+          </a>
+
+          <a href="/tn/" class="country-card fade-in floating" aria-label="Accéder au centre de formation en Tunisie">
+            <figure class="country-flag tunisia-flag" aria-label="Drapeau tunisien">☪</figure>
+            <h2 class="country-name">🇹🇳 Tunisie</h2>
+            <p class="country-center">Centre de Tunis</p>
+            <p class="country-info">
+              Formations adaptées au marché tunisien et nord-africain. 
+              Programmes certifiants et reconnus localement.
+            </p>
+            <span class="country-btn">
+              Accéder au site tunisien
+              <span aria-hidden="true">→</span>
+            </span>
+          </a>
+        </nav>
+      </article>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <article class="hero-container">
+        <h1>Bienvenue chez AST-ASTR FORMATION</h1>
+        <p class="hero-description">
+          Organisme de formation professionnelle spécialisé dans les CACES, habilitations électriques 
+          et permis de conduire. Découvrez nos centres en France et en Tunisie pour une formation 
+          de qualité adaptée à vos besoins.
+        </p>
+      </article>
+    </section>
+
+    <!-- Notre Histoire Section -->
+    <section class="about" id="notre-histoire">
+      <article class="about-container">
+        <h2 class="section-title">Notre Histoire</h2>
+        <p class="section-subtitle">
+          Plus de 15 ans d'engagement dans l'excellence de la formation professionnelle
+        </p>
+        
+        <section class="history-content">
+          <article class="history-text fade-in">
+            <h3>2010 - Les Fondations</h3>
+            <p>
+              <strong>AST-ASTR FORMATION</strong> naît de la vision de créer un organisme de formation 
+              d'excellence, spécialisé dans les métiers de la sécurité et de la conduite. Dès le départ, 
+              notre mission est claire : offrir des formations de qualité qui répondent aux besoins réels 
+              du marché du travail.
+            </p>
+          </article>
+
+          <article class="history-text fade-in">
+            <h3>2015 - Expansion Internationale</h3>
+            <p>
+              Fort de notre succès en France, nous ouvrons notre premier centre en Tunisie à Tunis. 
+              Cette expansion marque le début de notre présence internationale et notre engagement 
+              à adapter nos formations aux spécificités locales tout en maintenant nos standards d'excellence.
+            </p>
+          </article>
+
+          <article class="history-text fade-in">
+            <h3>2020 - Innovation Pédagogique</h3>
+            <p>
+              Nous intégrons les dernières technologies dans nos méthodes d'enseignement et développons 
+              des parcours de formation innovants. Nos simulateurs de pointe et nos plateformes 
+              numériques révolutionnent l'apprentissage des compétences techniques.
+            </p>
+          </article>
+
+          <article class="history-text fade-in">
+            <h3>Aujourd'hui - Excellence Reconnue</h3>
+            <p>
+              Avec plus de 5000 stagiaires formés et un taux de réussite de 95%, AST-ASTR FORMATION 
+              est aujourd'hui reconnue comme un leader dans son domaine. Nos certifications sont 
+              recherchées par les entreprises et nos diplômés sont appréciés sur le marché du travail.
+            </p>
+          </article>
+        </section>
+      </article>
+    </section>
+
+    <!-- Recrutement Section -->
+    <section class="recruitment" id="recrutement">
+      <article class="recruitment-container">
+        <h2 class="section-title">Rejoignez Notre Équipe</h2>
+        <p class="section-subtitle">
+          Nous recherchons des talents passionnés pour développer l'avenir de la formation professionnelle
+        </p>
+        
+        <section class="recruitment-content">
+          <article class="recruitment-intro fade-in">
+            <h3>Pourquoi nous rejoindre ?</h3>
+            <p>
+              AST-ASTR FORMATION offre un environnement de travail stimulant où l'innovation 
+              et l'excellence pédagogique sont au cœur de nos préoccupations. Rejoignez une équipe 
+              dynamique et contribuez à former les professionnels de demain.
+            </p>
+          </article>
+
+          <section class="job-offers">
+            <article class="job-card fade-in">
+              <h4>🎓 Formateur CACES</h4>
+              <p>Nous recherchons des formateurs expérimentés pour nos formations CACES. Maîtrise des équipements de chantier et pédagogie requises.</p>
+              <ul>
+                <li>CDI - Temps plein</li>
+                <li>France & Tunisie</li>
+                <li>Expérience 3+ ans</li>
+              </ul>
+            </article>
+
+            <article class="job-card fade-in">
+              <h4>⚡ Formateur Habilitations Électriques</h4>
+              <p>Spécialiste en électricité pour former aux habilitations électriques. Connaissance des normes de sécurité indispensable.</p>
+              <ul>
+                <li>CDI - Temps plein</li>
+                <li>Centre de Vitrolles</li>
+                <li>Certification obligatoire</li>
+              </ul>
+            </article>
+
+            <article class="job-card fade-in">
+              <h4>🚗 Moniteur Auto-École</h4>
+              <p>Moniteur expérimenté pour nos formations permis de conduire. Patience, pédagogie et expertise de la conduite requises.</p>
+              <ul>
+                <li>CDI/CDD</li>
+                <li>France & Tunisie</li>
+                <li>BEPECASER souhaité</li>
+              </ul>
+            </article>
+          </section>
+
+          <section class="recruitment-cta fade-in">
+            <h3>Candidature Spontanée</h3>
+            <p>Vous ne trouvez pas l'offre qui vous correspond ? Envoyez-nous votre candidature spontanée !</p>
+            <a href="/postuler" class="recruitment-btn">Postuler Maintenant</a>
+          </section>
+        </section>
+      </article>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+      <article class="stats-container">
+        <section class="stats-grid">
+          <article class="stat-item fade-in pulse">
+            <span class="stat-number">15+</span>
+            <p class="stat-label">Années d'expérience</p>
+          </article>
+          <article class="stat-item fade-in pulse">
+            <span class="stat-number">5000+</span>
+            <p class="stat-label">Stagiaires formés</p>
+          </article>
+          <article class="stat-item fade-in pulse">
+            <span class="stat-number">95%</span>
+            <p class="stat-label">Taux de réussite</p>
+          </article>
+          <article class="stat-item fade-in pulse">
+            <span class="stat-number">2</span>
+            <p class="stat-label">Pays d'implantation</p>
+          </article>
+        </section>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <section class="footer-container">
+      <article class="footer-content">
+        <section class="footer-section">
+          <h3>AST-ASTR FORMATION</h3>
+          <p style="color: rgba(255,255,255,0.8); line-height: 1.7; font-size: 1.1rem;">
+            Organisme de formation professionnelle spécialisé dans les CACES, 
+            habilitations électriques et permis de conduire.
+          </p>
+        </section>
+        
+        <nav class="footer-section" aria-label="Navigation formations">
+          <h3>Nos Formations</h3>
+          <ul>
+            <li><a href="#formations-caces">CACES</a></li>
+            <li><a href="#habilitations-electriques">Habilitations électriques</a></li>
+            <li><a href="#permis-conduire">Permis de conduire</a></li>
+            <li><a href="#securite-prevention">Sécurité & Prévention</a></li>
+          </ul>
+        </nav>
+        
+        <nav class="footer-section" aria-label="Navigation centres">
+          <h3>Nos Centres</h3>
+          <ul>
+            <li><a href="/fr/">🇫🇷 Centre de Vitrolles</a></li>
+            <li><a href="/tn/">🇹🇳 Centre de Tunis</a></li>
+          </ul>
+        </nav>
+        
+        <nav class="footer-section" aria-label="Navigation légale">
+          <h3>Informations Légales</h3>
+          <ul>
+            <li><a href="/mentions-legales">Mentions légales</a></li>
+            <li><a href="/politique-de-confidentialite">Politique de confidentialité</a></li>
+            <li><a href="/conditions-generales">Conditions générales</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </article>
+      
+      <section class="footer-bottom">
+        <p>&copy; 2025 AST-ASTR FORMATION. Tous droits réservés. | Organisme de formation déclaré sous le numéro XX.XX.XXXXX.XX</p>
+      </section>
+    </section>
+  </footer>
+
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Enhanced Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.15,
+      rootMargin: '0px 0px -80px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          
+          // Add staggered animation for elements in the same container
+          const container = entry.target.parentElement;
+          const siblings = container.querySelectorAll('.fade-in');
+          siblings.forEach((sibling, index) => {
+            if (sibling === entry.target) {
+              sibling.style.transitionDelay = `${index * 0.2}s`;
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    // Observe all fade-in elements
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Enhanced counter animation for stats
+    function animateCounter(element, target) {
+      let current = 0;
+      const suffix = element.textContent.replace(/[0-9]/g, '');
+      const increment = target / 80; // Smoother animation
+      
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          element.textContent = target + suffix;
+          clearInterval(timer);
+          // Add bounce effect when complete
+          element.style.transform = 'scale(1.1)';
+          setTimeout(() => {
+            element.style.transform = 'scale(1)';
+          }, 200);
+        } else {
+          element.textContent = Math.floor(current) + suffix;
+        }
+      }, 20);
+    }
+
+    // Trigger counter animation when stats section is visible
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const statNumbers = entry.target.querySelectorAll('.stat-number');
+          statNumbers.forEach((stat, index) => {
+            setTimeout(() => {
+              const text = stat.textContent;
+              const target = parseInt(text.replace(/[^0-9]/g, ''));
+              animateCounter(stat, target);
+            }, index * 300); // Staggered animation
+          });
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const statsSection = document.querySelector('.stats');
+    if (statsSection) {
+      statsObserver.observe(statsSection);
+    }
+
+    // Enhanced hover effects for country cards
+    document.querySelectorAll('.country-card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-12px) scale(1.03)';
+        this.style.boxShadow = '0 30px 60px -12px rgba(0, 0, 0, 0.3)';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+        this.style.boxShadow = 'var(--shadow-xl)';
+      });
+    });
+
+    // Enhanced page transition effect
+    document.querySelectorAll('.country-card').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        
+        // Add sophisticated loading animation
+        document.body.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
+        document.body.style.transform = 'scale(0.95)';
+        document.body.style.opacity = '0.8';
+        
+        // Create loading overlay
+        const overlay = document.createElement('div');
+        overlay.style.cssText = `
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(135deg, #1e3a8a 0%, #0ea5e9 100%);
+          z-index: 10000;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-size: 1.5rem;
+          font-weight: 700;
+        `;
+        overlay.innerHTML = '<div>Chargement...</div>';
+        document.body.appendChild(overlay);
+        
+        setTimeout(() => {
+          overlay.style.opacity = '1';
+        }, 100);
+        
+        setTimeout(() => {
+          window.location.href = href;
+        }, 800);
+      });
+    });
+
+    // Mobile menu toggle with enhanced animations
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+
+    mobileMenuToggle.addEventListener('click', function() {
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !isExpanded);
+      mobileNav.classList.toggle('active');
+      
+      // Enhanced icon animation
+      this.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(90deg)';
+      this.textContent = isExpanded ? '☰' : '✕';
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.mobile-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+        mobileMenuToggle.textContent = '☰';
+        mobileMenuToggle.style.transform = 'rotate(0deg)';
+      });
+    });
+
+    // Close mobile menu on outside click
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.main-header')) {
+        mobileNav.classList.remove('active');
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+        mobileMenuToggle.textContent = '☰';
+        mobileMenuToggle.style.transform = 'rotate(0deg)';
+      }
+    });
+
+    // Add stagger effect to cards with enhanced timing
+    document.querySelectorAll('.fade-in').forEach((element, index) => {
+      element.style.transitionDelay = `${index * 0.15}s`;
+    });
+
+    // Parallax effect for background elements
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const parallax = document.querySelectorAll('.country-selection, .recruitment');
+      
+      parallax.forEach(section => {
+        const speed = 0.5;
+        const yPos = -(scrolled * speed);
+        section.style.backgroundPosition = `center ${yPos}px`;
+      });
+    });
+
+    // Add loading animation for the entire page
+    window.addEventListener('load', () => {
+      document.body.style.opacity = '0';
+      document.body.style.transform = 'translateY(20px)';
+      document.body.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+      
+      setTimeout(() => {
+        document.body.style.opacity = '1';
+        document.body.style.transform = 'translateY(0)';
+      }, 100);
+    });
+
+    console.log('🚀 AST-ASTR FORMATION - Site web chargé avec la nouvelle charte graphique!');
+  </script>
+</body>
+</html>
